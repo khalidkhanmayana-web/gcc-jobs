@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Senior CAD Design Engineer",
+    "company": "Kuwait Industrial Group",
+    "country": "kuwait",
+    "location": "Ahmadi, Kuwait",
+    "type": "Full-time",
+    "posted": "2026-07-22",
+    "applyUrl": "https://example.com/apply-job-1"
+  },
+  {
+    "id": 2,
+    "title": "Document Controller",
+    "company": "Dubai Engineering LLC",
+    "country": "uae",
+    "location": "Dubai, UAE",
+    "type": "Full-time",
+    "posted": "2026-07-23",
+    "applyUrl": "https://example.com/apply-job-2"
+  }
+]
