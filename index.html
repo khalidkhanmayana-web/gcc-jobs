@@ -3,60 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GCC Career Hub | Verified Regional Jobs & Opportunities</title>
+    <title>GCC Engineering & Technical Career Hub</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-zinc-950 text-zinc-100 min-h-screen font-sans selection:bg-emerald-500 selection:text-zinc-950">
+<body class="bg-zinc-950 text-zinc-100 min-h-screen font-sans">
 
-    <!-- Header -->
+    <!-- Header / Navigation Menu -->
     <header class="border-b border-zinc-800 bg-zinc-900/50 backdrop-blur sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-            <span class="text-xl font-bold tracking-tight text-emerald-400">GCC<span class="text-white">Jobs.io</span></span>
-            <nav class="hidden md:flex gap-6 text-sm text-zinc-400">
-                <a href="#countries" class="hover:text-white transition">Countries</a>
-                <a href="#listings" class="hover:text-white transition">Recent Openings</a>
+            <a href="index.html" class="text-xl font-bold tracking-tight text-emerald-400">GCC<span class="text-white">Jobs.io</span></a>
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-zinc-300">
+                <a href="index.html" class="hover:text-emerald-400 transition">Home</a>
+                <a href="kuwait.html" class="hover:text-emerald-400 transition">Kuwait</a>
+                <a href="uae.html" class="hover:text-emerald-400 transition">UAE</a>
+                <a href="ksa.html" class="hover:text-emerald-400 transition">KSA</a>
+                <a href="remote.html" class="hover:text-emerald-400 transition">Remote</a>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="max-w-7xl mx-auto px-6 py-20 text-center">
-        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
-            Find High-Paying Careers Across the <span class="text-emerald-400">GCC Region</span>
-        </h1>
-        <p class="text-zinc-400 max-w-2xl mx-auto text-lg mb-10">
-            Aggregated engineering, technical, and remote vacancies in UAE, Kuwait, Saudi Arabia, and beyond. Apply directly on official employer portals.
-        </p>
-        
-        <!-- Country Quick Select -->
-        <div id="countries" class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <a href="kuwait.html" class="p-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-emerald-500 transition group text-left">
-                <div class="text-2xl mb-2">🇰🇼</div>
-                <div class="font-semibold group-hover:text-emerald-400 transition">Kuwait</div>
-                <div class="text-xs text-zinc-500">View Openings</div>
+    <main class="max-w-6xl mx-auto px-6 py-16">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800/50 font-semibold">Verified Regional Opportunities</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-4">Engineering & Technical Hub for the GCC</h1>
+            <p class="text-zinc-400 mt-4 text-base">Select a country directory or explore flexible technical roles across Kuwait, UAE, Saudi Arabia, and Remote contracts.</p>
+        </div>
+
+        <!-- Country Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <a href="kuwait.html" class="p-6 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-emerald-500 transition group block">
+                <span class="text-3xl">🇰🇼</span>
+                <h2 class="text-xl font-semibold mt-4 group-hover:text-emerald-400 transition">Kuwait</h2>
+                <p class="text-zinc-400 text-sm mt-1">Ahmadi, Shuaiba & Kuwait City engineering openings.</p>
             </a>
-            <a href="uae.html" class="p-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-emerald-500 transition group text-left">
-                <div class="text-2xl mb-2">🇦🇪</div>
-                <div class="font-semibold group-hover:text-emerald-400 transition">UAE / Dubai</div>
-                <div class="text-xs text-zinc-500">View Openings</div>
+
+            <a href="uae.html" class="p-6 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-emerald-500 transition group block">
+                <span class="text-3xl">🇦🇪</span>
+                <h2 class="text-xl font-semibold mt-4 group-hover:text-emerald-400 transition">UAE</h2>
+                <p class="text-zinc-400 text-sm mt-1">Dubai, Abu Dhabi & Sharjah technical roles.</p>
             </a>
-            <a href="ksa.html" class="p-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-emerald-500 transition group text-left">
-                <div class="text-2xl mb-2">🇸🇦</div>
-                <div class="font-semibold group-hover:text-emerald-400 transition">Saudi Arabia</div>
-                <div class="text-xs text-zinc-500">View Openings</div>
+
+            <a href="ksa.html" class="p-6 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-emerald-500 transition group block">
+                <span class="text-3xl">🇸🇦</span>
+                <h2 class="text-xl font-semibold mt-4 group-hover:text-emerald-400 transition">Saudi Arabia</h2>
+                <p class="text-zinc-400 text-sm mt-1">Riyadh, Jeddah & Jubail industrial positions.</p>
             </a>
-            <a href="remote.html" class="p-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-emerald-500 transition group text-left">
-                <div class="text-2xl mb-2">💻</div>
-                <div class="font-semibold group-hover:text-emerald-400 transition">Remote GCC</div>
-                <div class="text-xs text-zinc-500">View Openings</div>
+
+            <a href="remote.html" class="p-6 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-emerald-500 transition group block">
+                <span class="text-3xl">💻</span>
+                <h2 class="text-xl font-semibold mt-4 group-hover:text-emerald-400 transition">Remote & Contract</h2>
+                <p class="text-zinc-400 text-sm mt-1">Flexible work-from-home and project support roles.</p>
             </a>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="border-t border-zinc-800 mt-20 py-8 text-center text-xs text-zinc-600">
-        &copy; 2026 GCCJobs.io. All rights reserved. Direct employer links aggregation.
-    </footer>
+        <!-- Recent Openings Section -->
+        <div>
+            <h3 class="text-2xl font-bold tracking-tight mb-6">Recent Featured Openings</h3>
+            <div class="space-y-4">
+                <div class="p-6 rounded-xl bg-zinc-900 border border-zinc-800 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800/50 font-medium">Kuwait</span>
+                        <h4 class="text-lg font-semibold mt-2">Senior CAD Design Engineer</h4>
+                        <p class="text-sm text-zinc-400">Kuwait Industrial Group &bull; Ahmadi, Kuwait</p>
+                    </div>
+                    <a href="kuwait.html" class="px-4 py-2 bg-zinc-800 hover:bg-emerald-500 hover:text-zinc-950 text-zinc-100 font-semibold text-sm rounded-lg transition">
+                        View Details
+                    </a>
+                </div>
+
+                <div class="p-6 rounded-xl bg-zinc-900 border border-zinc-800 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800/50 font-medium">UAE</span>
+                        <h4 class="text-lg font-semibold mt-2">Document Controller</h4>
+                        <p class="text-sm text-zinc-400">Dubai Engineering LLC &bull; Dubai, UAE</p>
+                    </div>
+                    <a href="uae.html" class="px-4 py-2 bg-zinc-800 hover:bg-emerald-500 hover:text-zinc-950 text-zinc-100 font-semibold text-sm rounded-lg transition">
+                        View Details
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
 
 </body>
 </html>
