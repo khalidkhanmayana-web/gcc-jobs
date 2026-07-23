@@ -1,22 +1,52 @@
 [
   {
-    "id": 1,
+    "id": 101,
     "title": "Senior CAD Design Engineer",
     "company": "Kuwait Industrial Group",
     "country": "kuwait",
     "location": "Ahmadi, Kuwait",
     "type": "Full-time",
-    "posted": "2026-07-22",
-    "applyUrl": "https://example.com/apply-job-1"
+    "posted": "2026-07-23",
+    "applyUrl": "https://kw.indeed.com/"
   },
   {
-    "id": 2,
+    "id": 102,
     "title": "Document Controller",
     "company": "Dubai Engineering LLC",
     "country": "uae",
     "location": "Dubai, UAE",
     "type": "Full-time",
     "posted": "2026-07-23",
-    "applyUrl": "https://example.com/apply-job-2"
+    "applyUrl": "https://www.bayt.com/"
+  },
+  {
+    "id": 103,
+    "title": "Mechanical Design Engineer",
+    "company": "Brunel Oil & Gas Services",
+    "country": "kuwait",
+    "location": "Ahmadi, Kuwait",
+    "type": "Full-time",
+    "posted": "2026-07-23",
+    "applyUrl": "https://kw.jobrapido.com/"
+  },
+  {
+    "id": 104,
+    "title": "Principal Mechanical Engineer",
+    "company": "Worley",
+    "country": "kuwait",
+    "location": "Al Ahmadi, Kuwait",
+    "type": "Full-time",
+    "posted": "2026-07-23",
+    "applyUrl": "https://www.careerjet.com.kw/"
+  },
+  {
+    "id": 105,
+    "title": "Technical Services Senior Engineer",
+    "company": "PROCAPITA Management Consulting",
+    "country": "kuwait",
+    "location": "Shuaiba, Kuwait",
+    "type": "Full-time",
+    "posted": "2026-07-23",
+    "applyUrl": "https://www.bayt.com/"
   }
 ]
