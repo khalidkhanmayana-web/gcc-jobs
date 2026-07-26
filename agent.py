@@ -1,109 +1,27 @@
 import json
 import datetime
 
-# Comprehensive job categories across all sectors in the GCC
 data = {
     "last_updated": str(datetime.datetime.now()),
     "categories": [
         {
-            "name": "Engineering & Technical",
+            "name": "Design & CAD Engineering",
             "listings": [
                 {
                     "title": "Senior CAD Design Engineer",
                     "country": "Kuwait",
                     "company": "Kuwait Industrial Group",
                     "location": "Ahmadi, Kuwait",
-                    "type": "Full-time"
+                    "type": "Full-time",
+                    "apply_url": "https://www.linkedin.com/jobs/search/?keyword=CAD+Engineer+Kuwait"
                 },
                 {
                     "title": "Technical Document Controller",
                     "country": "UAE",
                     "company": "Dubai Engineering LLC",
                     "location": "Dubai, UAE",
-                    "type": "Full-time"
-                },
-                {
-                    "title": "Project Design Engineer",
-                    "country": "Saudi Arabia",
-                    "company": "Al-Arrab Contracting Co.",
-                    "location": "Riyadh, KSA",
-                    "type": "Full-time"
-                }
-            ]
-        },
-        {
-            "name": "Information Technology & Software",
-            "listings": [
-                {
-                    "title": "Full Stack Developer",
-                    "country": "UAE",
-                    "company": "Emirates Tech Solutions",
-                    "location": "Dubai, UAE",
-                    "type": "Full-time"
-                },
-                {
-                    "title": "Cloud Infrastructure Engineer",
-                    "country": "Saudi Arabia",
-                    "company": "Riyadh Digital Systems",
-                    "location": "Riyadh, KSA",
-                    "type": "Full-time"
-                }
-            ]
-        },
-        {
-            "name": "Finance & Accounting",
-            "listings": [
-                {
-                    "title": "Senior Financial Analyst",
-                    "country": "Kuwait",
-                    "company": "Gulf Investment Bank",
-                    "location": "Kuwait City, Kuwait",
-                    "type": "Full-time"
-                },
-                {
-                    "title": "Corporate Accountant",
-                    "country": "UAE",
-                    "company": "Dubai Financial Corp",
-                    "location": "Abu Dhabi, UAE",
-                    "type": "Full-time"
-                }
-            ]
-        },
-        {
-            "name": "Sales, Marketing & Business Development",
-            "listings": [
-                {
-                    "title": "Regional Sales Manager",
-                    "country": "Saudi Arabia",
-                    "company": "Al-Mulla Trading",
-                    "location": "Jeddah, KSA",
-                    "type": "Full-time"
-                },
-                {
-                    "title": "Digital Marketing Specialist",
-                    "country": "UAE",
-                    "company": "Gulf Media Ventures",
-                    "location": "Dubai, UAE",
-                    "type": "Full-time"
-                }
-            ]
-        },
-        {
-            "name": "Healthcare & Medical",
-            "listings": [
-                {
-                    "title": "Clinical Nurse Specialist",
-                    "country": "Kuwait",
-                    "company": "Kuwait Specialized Hospital",
-                    "location": "Kuwait City, Kuwait",
-                    "type": "Full-time"
-                },
-                {
-                    "title": "General Practitioner",
-                    "country": "UAE",
-                    "company": "Emirates Health Services",
-                    "location": "Sharjah, UAE",
-                    "type": "Full-time"
+                    "type": "Full-time",
+                    "apply_url": "https://www.linkedin.com/jobs/search/?keyword=Document+Controller+UAE"
                 }
             ]
         },
@@ -115,22 +33,15 @@ data = {
                     "country": "Remote",
                     "company": "Gulf Engineering Bureau",
                     "location": "Remote (GCC Region)",
-                    "type": "Contract"
-                },
-                {
-                    "title": "Remote Customer Support Executive",
-                    "country": "Remote",
-                    "company": "Pan-GCC Digital Hub",
-                    "location": "Remote (GCC Region)",
-                    "type": "Part-time"
+                    "type": "Contract",
+                    "apply_url": "https://www.upwork.com/nx/search/jobs/?q=CAD%20Drafting"
                 }
             ]
         }
     ]
 }
 
-# Save into jobs.json
 with open('jobs.json', 'w') as f:
     json.dump(data, f, indent=4)
 
-print("All industry listings updated successfully!")
+print("Listings with direct links updated successfully!")
