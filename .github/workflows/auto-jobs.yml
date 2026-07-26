@@ -1,9 +1,12 @@
 name: Auto-Update GCC Jobs
 
 on:
-  workflow_dispatch: # Allows you to click a button to run it manually anytime
+  workflow_dispatch:
   schedule:
-    - cron: '0 6 * * *' # Runs automatically every day at 6:00 AM UTC
+    - cron: '0 6 * * *'
+
+permissions:
+  contents: write
 
 jobs:
   update-jobs:
