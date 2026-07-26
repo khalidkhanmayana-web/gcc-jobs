@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GCC All Industries Career Hub</title>
+    <title>GCC Career Hub - Industry Categories</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="bg-zinc-950 text-zinc-100 min-h-screen font-sans">
@@ -22,22 +22,21 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Main Content Container -->
     <main class="max-w-6xl mx-auto px-6 py-16">
         <div class="text-center max-w-2xl mx-auto mb-16">
-            <span class="text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800/50 font-semibold">Live Multi-Industry Opportunities</span>
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-4">GCC Career Hub Across All Sectors</h1>
-            <p class="text-zinc-400 mt-4 text-base">Explore live automated listings spanning engineering, IT, finance, healthcare, sales, and remote contracts.</p>
+            <span class="text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800/50 font-semibold">Verified Career Opportunities</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-4">Industry-Wise Job Feed</h1>
+            <p class="text-zinc-400 mt-4 text-base">Browse open positions organized neatly by professional sectors and industries.</p>
         </div>
 
         <!-- Dynamic Content Container -->
         <div id="job-categories-container" class="space-y-12">
-            <!-- Listings will load here automatically via JavaScript -->
-            <div class="text-center text-zinc-500 py-12">Loading live job listings...</div>
+            <div class="text-center text-zinc-500 py-12">Loading industry categories...</div>
         </div>
     </main>
 
-    <!-- JavaScript to Fetch and Render Listings from jobs.json -->
+    <!-- JavaScript to Render Industry-Wise Categories -->
     <script>
         async function loadJobs() {
             try {
@@ -46,7 +45,7 @@
                 const data = await response.json();
 
                 const container = document.getElementById('job-categories-container');
-                container.innerHTML = ''; // Clear loading text
+                container.innerHTML = '';
 
                 if (data.categories && data.categories.length > 0) {
                     data.categories.forEach(category => {
@@ -68,9 +67,9 @@
                                         <p class="text-sm text-zinc-400 mt-1">${job.company} &bull; ${job.location}</p>
                                     </div>
                                     <div class="mt-6 pt-4 border-t border-zinc-800/85 flex justify-end">
-                                        <button onclick="alert('Application portal simulation for: ${job.title}')" class="px-4 py-2 bg-zinc-800 hover:bg-emerald-500 hover:text-zinc-950 text-zinc-100 font-semibold text-sm rounded-lg transition cursor-pointer">
-                                            Apply Now
-                                        </button>
+                                        <a href="${job.apply_url}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-zinc-800 hover:bg-emerald-500 hover:text-zinc-950 text-zinc-100 font-semibold text-sm rounded-lg transition cursor-pointer inline-block">
+                                            Apply Now &rarr;
+                                        </a>
                                     </div>
                                 </div>
                             `;
@@ -84,7 +83,7 @@
                 console.error('Error loading jobs:', error);
                 document.getElementById('job-categories-container').innerHTML = `
                     <div class="text-center text-zinc-400 py-12">
-                        <p>Listings are updating. Please run your GitHub Action workflow or check back shortly!</p>
+                        <p>Listings are updating. Please check back shortly!</p>
                     </div>
                 `;
             }
