@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GCC Engineering & Technical Career Hub</title>
+    <title>GCC All Industries Career Hub</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="bg-zinc-950 text-zinc-100 min-h-screen font-sans">
@@ -25,66 +25,72 @@
     <!-- Hero Section -->
     <main class="max-w-6xl mx-auto px-6 py-16">
         <div class="text-center max-w-2xl mx-auto mb-16">
-            <span class="text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800/50 font-semibold">Verified Regional Opportunities</span>
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-4">Engineering & Technical Hub for the GCC</h1>
-            <p class="text-zinc-400 mt-4 text-base">Select a country directory or explore flexible technical roles across Kuwait, UAE, Saudi Arabia, and Remote contracts.</p>
+            <span class="text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800/50 font-semibold">Live Multi-Industry Opportunities</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-4">GCC Career Hub Across All Sectors</h1>
+            <p class="text-zinc-400 mt-4 text-base">Explore live automated listings spanning engineering, IT, finance, healthcare, sales, and remote contracts.</p>
         </div>
 
-        <!-- Country Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <a href="kuwait.html" class="p-6 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-emerald-500 transition group block">
-                <span class="text-3xl">🇰🇼</span>
-                <h2 class="text-xl font-semibold mt-4 group-hover:text-emerald-400 transition">Kuwait</h2>
-                <p class="text-zinc-400 text-sm mt-1">Ahmadi, Shuaiba & Kuwait City engineering openings.</p>
-            </a>
-
-            <a href="uae.html" class="p-6 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-emerald-500 transition group block">
-                <span class="text-3xl">🇦🇪</span>
-                <h2 class="text-xl font-semibold mt-4 group-hover:text-emerald-400 transition">UAE</h2>
-                <p class="text-zinc-400 text-sm mt-1">Dubai, Abu Dhabi & Sharjah technical roles.</p>
-            </a>
-
-            <a href="ksa.html" class="p-6 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-emerald-500 transition group block">
-                <span class="text-3xl">🇸🇦</span>
-                <h2 class="text-xl font-semibold mt-4 group-hover:text-emerald-400 transition">Saudi Arabia</h2>
-                <p class="text-zinc-400 text-sm mt-1">Riyadh, Jeddah & Jubail industrial positions.</p>
-            </a>
-
-            <a href="remote.html" class="p-6 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-emerald-500 transition group block">
-                <span class="text-3xl">💻</span>
-                <h2 class="text-xl font-semibold mt-4 group-hover:text-emerald-400 transition">Remote & Contract</h2>
-                <p class="text-zinc-400 text-sm mt-1">Flexible work-from-home and project support roles.</p>
-            </a>
-        </div>
-
-        <!-- Recent Openings Section -->
-        <div>
-            <h3 class="text-2xl font-bold tracking-tight mb-6">Recent Featured Openings</h3>
-            <div class="space-y-4">
-                <div class="p-6 rounded-xl bg-zinc-900 border border-zinc-800 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                    <div>
-                        <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800/50 font-medium">Kuwait</span>
-                        <h4 class="text-lg font-semibold mt-2">Senior CAD Design Engineer</h4>
-                        <p class="text-sm text-zinc-400">Kuwait Industrial Group &bull; Ahmadi, Kuwait</p>
-                    </div>
-                    <a href="kuwait.html" class="px-4 py-2 bg-zinc-800 hover:bg-emerald-500 hover:text-zinc-950 text-zinc-100 font-semibold text-sm rounded-lg transition">
-                        View Details
-                    </a>
-                </div>
-
-                <div class="p-6 rounded-xl bg-zinc-900 border border-zinc-800 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                    <div>
-                        <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800/50 font-medium">UAE</span>
-                        <h4 class="text-lg font-semibold mt-2">Document Controller</h4>
-                        <p class="text-sm text-zinc-400">Dubai Engineering LLC &bull; Dubai, UAE</p>
-                    </div>
-                    <a href="uae.html" class="px-4 py-2 bg-zinc-800 hover:bg-emerald-500 hover:text-zinc-950 text-zinc-100 font-semibold text-sm rounded-lg transition">
-                        View Details
-                    </a>
-                </div>
-            </div>
+        <!-- Dynamic Content Container -->
+        <div id="job-categories-container" class="space-y-12">
+            <!-- Listings will load here automatically via JavaScript -->
+            <div class="text-center text-zinc-500 py-12">Loading live job listings...</div>
         </div>
     </main>
 
+    <!-- JavaScript to Fetch and Render Listings from jobs.json -->
+    <script>
+        async function loadJobs() {
+            try {
+                const response = await fetch('jobs.json');
+                if (!response.ok) throw new Error('Failed to load data');
+                const data = await response.json();
+
+                const container = document.getElementById('job-categories-container');
+                container.innerHTML = ''; // Clear loading text
+
+                if (data.categories && data.categories.length > 0) {
+                    data.categories.forEach(category => {
+                        let categoryHTML = `
+                            <div>
+                                <h3 class="text-2xl font-bold tracking-tight mb-6 text-emerald-400 border-b border-zinc-800 pb-2">${category.name}</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        `;
+
+                        category.listings.forEach(job => {
+                            categoryHTML += `
+                                <div class="p-6 rounded-xl bg-zinc-900 border border-zinc-800 flex flex-col justify-between hover:border-emerald-500/50 transition">
+                                    <div>
+                                        <div class="flex justify-between items-start gap-2">
+                                            <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800/50 font-medium">${job.country}</span>
+                                            <span class="text-xs text-zinc-400 bg-zinc-800 px-2.5 py-1 rounded-full">${job.type}</span>
+                                        </div>
+                                        <h4 class="text-lg font-semibold mt-3 text-zinc-100">${job.title}</h4>
+                                        <p class="text-sm text-zinc-400 mt-1">${job.company} &bull; ${job.location}</p>
+                                    </div>
+                                    <div class="mt-6 pt-4 border-t border-zinc-800/85 flex justify-end">
+                                        <button onclick="alert('Application portal simulation for: ${job.title}')" class="px-4 py-2 bg-zinc-800 hover:bg-emerald-500 hover:text-zinc-950 text-zinc-100 font-semibold text-sm rounded-lg transition cursor-pointer">
+                                            Apply Now
+                                        </button>
+                                    </div>
+                                </div>
+                            `;
+                        });
+
+                        categoryHTML += `</div></div>`;
+                        container.innerHTML += categoryHTML;
+                    });
+                }
+            } catch (error) {
+                console.error('Error loading jobs:', error);
+                document.getElementById('job-categories-container').innerHTML = `
+                    <div class="text-center text-zinc-400 py-12">
+                        <p>Listings are updating. Please run your GitHub Action workflow or check back shortly!</p>
+                    </div>
+                `;
+            }
+        }
+
+        loadJobs();
+    </script>
 </body>
 </html>
