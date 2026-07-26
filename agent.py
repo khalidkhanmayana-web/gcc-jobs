@@ -5,6 +5,31 @@ data = {
     "last_updated": str(datetime.datetime.now()),
     "categories": [
         {
+            "name": "Walk-In Interviews (India)",
+            "listings": [
+                {
+                    "title": "Direct Client Interview: Oil & Gas Project",
+                    "country": "India",
+                    "company": "Admire Gulf Consultancy Services",
+                    "location": "Chennai, India",
+                    "type": "Walk-In Drive",
+                    "date": "2026-07-26",
+                    "image_url": "https://gccwalkin.com/wp-content/uploads/sample-poster-1.jpg",
+                    "apply_url": "https://gccwalkin.com/"
+                },
+                {
+                    "title": "Urgent Recruitment: Facilities & Maintenance",
+                    "country": "India",
+                    "company": "VG Travels & Consultancy",
+                    "location": "Kochi & Trichy, India",
+                    "type": "Walk-In Drive",
+                    "date": "2026-07-24",
+                    "image_url": "https://gccwalkin.com/wp-content/uploads/sample-poster-2.jpg",
+                    "apply_url": "https://gccwalkin.com/"
+                }
+            ]
+        },
+        {
             "name": "Design & CAD Engineering",
             "listings": [
                 {
@@ -13,15 +38,8 @@ data = {
                     "company": "Kuwait Industrial Group",
                     "location": "Ahmadi, Kuwait",
                     "type": "Full-time",
-                    "apply_url": "https://www.linkedin.com/jobs/search/?keyword=CAD+Engineer+Kuwait"
-                },
-                {
-                    "title": "Technical Document Controller",
-                    "country": "UAE",
-                    "company": "Dubai Engineering LLC",
-                    "location": "Dubai, UAE",
-                    "type": "Full-time",
-                    "apply_url": "https://www.linkedin.com/jobs/search/?keyword=Document+Controller+UAE"
+                    "date": "2026-07-25",
+                    "apply_url": "https://www.linkedin.com"
                 }
             ]
         },
@@ -34,15 +52,8 @@ data = {
                     "company": "GEMS Education",
                     "location": "Dubai, UAE",
                     "type": "Full-time",
-                    "apply_url": "https://www.linkedin.com/jobs/search/?keyword=Mathematics+Teacher+UAE"
-                },
-                {
-                    "title": "Lecturer in Electronics & Communication",
-                    "country": "Kuwait",
-                    "company": "Gulf University for Science & Technology",
-                    "location": "Mubarak Al-Abdullah, Kuwait",
-                    "type": "Full-time",
-                    "apply_url": "https://www.linkedin.com/jobs/search/?keyword=Engineering+Lecturer+Kuwait"
+                    "date": "2026-07-25",
+                    "apply_url": "https://www.linkedin.com"
                 }
             ]
         },
@@ -50,20 +61,13 @@ data = {
             "name": "Medical & Healthcare",
             "listings": [
                 {
-                    "title": "General Practitioner / Doctor",
-                    "country": "Kuwait",
-                    "company": "Al Salam International Hospital",
-                    "location": "Bneid Al Gar, Kuwait",
-                    "type": "Full-time",
-                    "apply_url": "https://www.linkedin.com/jobs/search/?keyword=General+Practitioner+Kuwait"
-                },
-                {
                     "title": "Registered Staff Nurse",
                     "country": "KSA",
                     "company": "Saudi German Health",
                     "location": "Riyadh, Saudi Arabia",
                     "type": "Full-time",
-                    "apply_url": "https://www.linkedin.com/jobs/search/?keyword=Staff+Nurse+KSA"
+                    "date": "2026-07-26",
+                    "apply_url": "https://www.linkedin.com"
                 }
             ]
         },
@@ -74,43 +78,10 @@ data = {
                     "title": "Full Stack Software Engineer",
                     "country": "Remote",
                     "company": "Global Tech Solutions",
-                    "location": "Remote (GCC / International)",
-                    "type": "Full-time",
-                    "apply_url": "https://www.linkedin.com/jobs/search/?keyword=Full+Stack+Developer"
-                },
-                {
-                    "title": "IT Systems Administrator",
-                    "country": "KSA",
-                    "company": "Riyadh Digital Infrastructure",
-                    "location": "Riyadh, Saudi Arabia",
-                    "type": "Full-time",
-                    "apply_url": "https://www.linkedin.com/jobs/search/?keyword=IT+Systems+Administrator+KSA"
-                }
-            ]
-        },
-        {
-            "name": "Walk-In Interviews (India)",
-            "listings": [
-                {
-                    "title": "Walk-In Drive: Engineering & Technical Support",
-                    "country": "India",
-                    "company": "Multi-Sector GCC Recruitment Hub",
-                    "location": "Hyderabad / Kochi, India",
-                    "type": "Walk-In",
-                    "apply_url": "#"
-                }
-            ]
-        },
-        {
-            "name": "Remote & Contract Roles",
-            "listings": [
-                {
-                    "title": "Freelance CAD & Drafting Specialist",
-                    "country": "Remote",
-                    "company": "Gulf Engineering Bureau",
-                    "location": "Remote (GCC Region)",
+                    "location": "Remote (GCC)",
                     "type": "Contract",
-                    "apply_url": "https://www.upwork.com/nx/search/jobs/?q=CAD%20Drafting"
+                    "date": "2026-07-23",
+                    "apply_url": "https://www.upwork.com"
                 }
             ]
         }
@@ -120,4 +91,4 @@ data = {
 with open('jobs.json', 'w') as f:
     json.dump(data, f, indent=4)
 
-print("Expanded multi-industry categories and Walk-In section updated successfully!")
+print("Jobs data updated with dates and sorting support successfully!")
