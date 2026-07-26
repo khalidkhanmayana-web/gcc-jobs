@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GCC Career Hub - Regional Listings</title>
+    <title>GCC Career Hub - Industry Categories</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="bg-zinc-950 text-zinc-100 min-h-screen font-sans">
@@ -26,17 +26,17 @@
     <main class="max-w-6xl mx-auto px-6 py-16">
         <div class="text-center max-w-2xl mx-auto mb-16">
             <span class="text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800/50 font-semibold">Verified Career Opportunities</span>
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-4">Regional Job Feed</h1>
-            <p class="text-zinc-400 mt-4 text-base">Browse live open positions synchronized from across the region.</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-4">Industry-Wise Job Feed</h1>
+            <p class="text-zinc-400 mt-4 text-base">Browse open positions organized neatly by professional sectors and industries.</p>
         </div>
 
         <!-- Dynamic Content Container -->
         <div id="job-categories-container" class="space-y-12">
-            <div class="text-center text-zinc-500 py-12">Loading listings...</div>
+            <div class="text-center text-zinc-500 py-12">Loading industry categories...</div>
         </div>
     </main>
 
-    <!-- JavaScript to Fetch and Render Listings with Live Links -->
+    <!-- JavaScript to Render Industry-Wise Categories -->
     <script>
         async function loadJobs() {
             try {
